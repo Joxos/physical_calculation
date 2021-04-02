@@ -2,9 +2,11 @@ from units import *
 
 
 def split(data: str):
-    for i in range(len(data)):
-        if data[i].isalpha():
-            return (float(data[:i]), data[i:])
+    if type(data) == str:
+        for i in range(len(data)):
+            if data[i].isalpha():
+                return (float(data[:i]), data[i:])
+    raise SyntaxError("Invalid syntax of inputing a data.")
 
 
 def transfer(data: str, unit: str):
