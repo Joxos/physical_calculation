@@ -11,8 +11,8 @@ def split(data: str):
 
 def transfer(data: str, unit: str):
     original_data, original_unit = split(data)
-    if original_unit in lengths.keys() and unit in lengths.keys():
-        return str(original_data/lengths[original_unit]*lengths[unit])+unit
+    if original_unit in length.keys() and unit in length.keys():
+        return str(original_data/length[original_unit]*length[unit])+unit
     elif original_unit in mass.keys() and unit in mass.keys():
         return str(original_data/mass[original_unit]*mass[unit])+unit
     else:
